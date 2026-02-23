@@ -26,7 +26,7 @@
     justify-content: center;
     min-height: 100vh;
   }
-  body.lang-ja { font-family: 'Noto Serif JP', serif; }
+  body.lang-ja { font-family: 'Noto Serif JP', 'MS Mincho', serif; }
   body.lang-en { font-family: 'Cormorant Garamond', serif; }
 
   .phone-wrap {
@@ -40,38 +40,17 @@
 
   /* ─── 배경 이미지 (Hero 제외 전체) ─── */
   .bg-wrap {
-    position: relative;
-    background: transparent;
-  }
-
-  /* iOS Safari fixed 버그 우회 — pseudo element로 fixed 배경 처리 */
-  .bg-wrap::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 430px;
-    height: 100%;
     background-image: url('weddingBG.jpg');
     background-size: cover;
     background-position: center;
-    z-index: 0;
-    pointer-events: none;
+    background-attachment: fixed;
   }
 
-  .bg-wrap section,
-  .bg-wrap .gallery-section,
-  .bg-wrap footer {
-    position: relative;
-    z-index: 1;
-  }
-
-  /* 섹션 배경 완전 투명 — 배경 이미지 그대로 노출 */
+  /* 섹션 배경 투명하게 + 텍스트 검정 계열로 */
   .bg-wrap section,
   .bg-wrap .gallery-section {
-    background: transparent !important;
-    backdrop-filter: none !important;
+      background: rgba(255,255,255,0.0) !important;
+      /*backdrop-filter: blur(2px);*/
   }
 
   .bg-wrap footer {
@@ -134,7 +113,6 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
-    z-index: 1;
   }
 
   .hero::before {
@@ -418,7 +396,7 @@
   .gallery-item::after { content: ''; }
 
   /* ─── FOOTER ─── */
-  footer { background: var(--dark); padding: 48px 32px; text-align: center; position: relative; z-index: 1; }
+  footer { background: var(--dark); padding: 48px 32px; text-align: center; }
   .footer-names { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 300; color: var(--cream); letter-spacing: 4px; margin-bottom: 16px; }
   .footer-names em { font-style: normal; color: var(--gold); margin: 0 12px; }
   .footer-date { font-size: 12px; color: var(--light-text); letter-spacing: 3px; }
