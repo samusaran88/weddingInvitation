@@ -14,12 +14,6 @@
     font-weight: normal;
     font-style: normal;
   }
-  @font-face {
-    font-family: 'sampleFont';
-    src: url('MemomentKkukkukk.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
   :root {
     --gold: #b8975a;
     --gold-light: #d4b483;
@@ -42,7 +36,6 @@
   }
   body.lang-ja { font-family: 'Shippori Mincho', serif; }
   body.lang-en { font-family: 'Cormorant Garamond', serif; }
-  body.lang-ko .hero-names { font-family: 'sampleFont', 'Nanum Myeongjo', serif; }
   body.lang-ko .hero-names { font-family: 'sampleFont', 'Nanum Myeongjo', serif; }
 
   .phone-wrap {
@@ -804,7 +797,7 @@
           신한은행 110-525-549010
           <span>김지애 (신부 본인)</span>
         </div>
-        <button class="copy-btn" onclick="copyAccount(this, '신한은행 110-209-722511')">복사</button>
+        <button class="copy-btn" onclick="copyAccount(this, '신한은행 110-525-549010')">복사</button>
       </div>
 
       <!-- 영어/일본어: 외국인 계좌 -->
