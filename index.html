@@ -8,6 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
+  @font-face {
+    font-family: 'sampleFont';
+    src: url('MemomentKkukkukk.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
   :root {
     --gold: #b8975a;
     --gold-light: #d4b483;
@@ -30,6 +36,7 @@
   }
   body.lang-ja { font-family: 'Shippori Mincho', serif; }
   body.lang-en { font-family: 'Cormorant Garamond', serif; }
+  body.lang-ko .hero-names { font-family: 'sampleFont', 'Nanum Myeongjo', serif; }
 
   .phone-wrap {
     width: 100%;
@@ -192,7 +199,7 @@
 
   .hero-names {
     font-family: 'Nanum Myeongjo', serif;
-    font-size: clamp(36px, 14vw, 48px);
+    font-size: clamp(30px, 11vw, 40px);
     font-weight: 300;
     color: var(--cream);
     line-height: 1.1;
@@ -753,7 +760,7 @@
           신한은행 110-209-722511
           <span>신설륜 (신랑 본인)</span>
         </div>
-        <button class="copy-btn" onclick="copyAccount(this, '신한은행 110-525-549010')">복사</button>
+        <button class="copy-btn" onclick="copyAccount(this, '신한은행 110-209-722511')">복사</button>
       </div>
 
       <!-- 영어/일본어: 외국인 계좌 -->
