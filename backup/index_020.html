@@ -14,6 +14,12 @@
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'sampleFont';
+    src: url('MemomentKkukkukk.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
   :root {
     --gold: #b8975a;
     --gold-light: #d4b483;
@@ -35,13 +41,6 @@
     min-height: 100vh;
   }
   body.lang-ja { font-family: 'Shippori Mincho', serif; }
-  /* 일본어는 한자 자폭이 넓어 letter-spacing이 과하게 적용되면 우측으로 치우쳐 보임 — 값을 줄여서 보정 */
-  body.lang-ja .hero-label   { letter-spacing: 2px; }
-  body.lang-ja .hero-names   { letter-spacing: 0px; }
-  body.lang-ja .sec-label    { letter-spacing: 2px; }
-  body.lang-ja .footer-names { letter-spacing: 1px; }
-  body.lang-ja .transport-title { letter-spacing: 1px; }
-  body.lang-ja .account-who  { letter-spacing: 1px; }
   body.lang-en { font-family: 'Cormorant Garamond', serif; }
   body.lang-ko .hero-names { font-family: 'sampleFont', 'Nanum Myeongjo', serif; }
   body.lang-ko .footer-names { font-family: 'sampleFont', 'Nanum Myeongjo', serif; }
@@ -521,7 +520,7 @@
       <div class="hero-label">
         <span class="t ko">저희 결혼합니다</span>
         <span class="t en">We are getting married</span>
-        <span class="t ja">結婚のご報告</span>
+        <span class="t ja">ご結婚のご報告</span>
       </div>
       <div class="hero-names">
         <span class="t ko">신설륜</span>
